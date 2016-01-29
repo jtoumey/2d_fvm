@@ -1,0 +1,6 @@
+/src/bin/
+
+*.exe
+*.dat
+*.o
+*.png

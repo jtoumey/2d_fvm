@@ -1,4 +1,4 @@
-SUBROUTINE WRITE_RESULTS_DIAGONAL(np,nx,ny,x,y,phi,phiW,phiE)
+SUBROUTINE WRITE_RESULTS(np,nx,ny,x,y,phi,phiW,phiE)
 !
 implicit none
 !
@@ -55,4 +55,4 @@ close(8)
 201 format(3x,f7.2,3x,f7.2,3x,f7.2)
 301 format(3x,f7.2,3x,f7.2,3x,f7.2,3x,f7.2,3x,f7.2,3x,f7.2)
 !
-END SUBROUTINE WRITE_RESULTS_DIAGONAL
+END SUBROUTINE WRITE_RESULTS

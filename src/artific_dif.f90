@@ -129,7 +129,7 @@ end do
 !
 !...Write the results to output files
 !
-call write_results_diagonal(np,nx,ny,x,y,phi,phiW,phiE)
+call write_results(np,nx,ny,x,y,phi,phiW,phiE)
 !
 !   Deallocate data
 !

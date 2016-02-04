@@ -52,7 +52,7 @@ end do
 !   Close the output file
 close(8)
 !
-201 format(3x,f7.2,3x,f7.2,3x,f7.2)
-301 format(3x,f7.2,3x,f7.2,3x,f7.2,3x,f7.2,3x,f7.2,3x,f7.2)
+201 format(3x,f12.8,3x,f12.8,3x,f12.8)
+301 format(3x,f12.8,3x,f12.8,3x,f12.8,3x,f12.8,3x,f12.8,3x,f12.8)
 !
 END SUBROUTINE WRITE_RESULTS

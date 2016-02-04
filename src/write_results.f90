@@ -14,8 +14,8 @@ integer :: diag_index,ii,jj
 real phi_exact
 !
 ! format statements
-character(len=28), parameter :: phi_diag = "(3x,f12.8,3x,f12.8,3x,f12.8)"
-character(len=55), parameter :: phi_cell = "(3x,f12.8,3x,f12.8,3x,f12.8,3x,f12.8,3x,f12.8,3x,f12.8)"
+character(len=28), parameter :: phi_diag = "(3x,f12.7,3x,f12.7,3x,f12.7)"
+character(len=55), parameter :: phi_cell = "(3x,f12.7,3x,f12.7,3x,f12.7,3x,f12.7,3x,f12.7,3x,f12.7)"
 !--------------------------------------------------------------------------!
 !
 !...Write the results (phi distribution) to a file

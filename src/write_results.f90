@@ -12,6 +12,10 @@ real :: phiW,phiE
 ! variables used only in this subroutine
 integer :: diag_index,ii,jj
 real phi_exact
+!
+! format statements
+character(len=28), parameter :: phi_diag = "(3x,f12.8,3x,f12.8,3x,f12.8)"
+character(len=55), parameter :: phi_cell = "(3x,f12.8,3x,f12.8,3x,f12.8,3x,f12.8,3x,f12.8,3x,f12.8)"
 !--------------------------------------------------------------------------!
 !
 !...Write the results (phi distribution) to a file
@@ -20,7 +24,7 @@ real phi_exact
 open(unit=7,file='phi_distr.dat',ACTION="write", STATUS="replace")
 do ii = 1,nx
    do jj = 1,ny
-      write(7,301)x(ii),y(jj),phi((ii-1)*ny+jj)
+      write(7,phi_cell)x(ii),y(jj),phi((ii-1)*ny+jj)
    end do
    write(7,*)
 end do
@@ -46,13 +50,10 @@ do ii = 1,nx
    !   Compute index of the cell on the diagonal from (0, ymax) -> (xmax, 0)
    !   Write to a file
    diag_index = ii*ny - (ii-1)
-   write(8,201)y(ii),phi(diag_index),phi_exact
+   write(8,phi_diag)y(ii),phi(diag_index),phi_exact
 end do
 !
 !   Close the output file
 close(8)
-!
-201 format(3x,f12.8,3x,f12.8,3x,f12.8)
-301 format(3x,f12.8,3x,f12.8,3x,f12.8,3x,f12.8,3x,f12.8,3x,f12.8)
 !
 END SUBROUTINE WRITE_RESULTS
